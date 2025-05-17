@@ -1,0 +1,12 @@
+{
+  "start_country": "Almanya",
+  "end_country": "Belçika",
+  "distance_geodesic": 1600.0,
+  "distance_road": 3000.0,
+  "time_road": 4.5,
+  "fuel": 120.0,
+  "tolls": 40.0,
+  "wages": 300.0,
+  "taxes": 3.0,
+  "kasa_tipi": "Tenteli"
+}
