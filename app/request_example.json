@@ -1,12 +1,10 @@
 {
-  "start_country": "Almanya",
-  "end_country": "Belçika",
-  "distance_geodesic": 1600.0,
-  "distance_road": 3000.0,
-  "time_road": 4.5,
-  "fuel": 120.0,
-  "tolls": 40.0,
-  "wages": 300.0,
-  "taxes": 3.0,
-  "kasa_tipi": "Tenteli"
+  "country": "Belgium",
+  "vehicle": "Tarpaulin Truck",
+  "cargo_ton": 17.5,
+  "distance_km": 3000.0,
+  "duration_hr": 4.5,
+  "complexity_factor": "medium",
+  "optimal_load_ton": 17.5,
+  "max_legal_ton": 20
 }
