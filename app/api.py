@@ -7,7 +7,6 @@ import os
 app = Flask(__name__)
 model = joblib.load("models/best_model_xgboost.pkl")
 
-# Eğitimde kullanılan OneHotEncoder'ı da kaydettiysen yükle
 encoder = joblib.load("models/encoder.pkl")
 expected_columns = joblib.load("models/expected_columns.pkl")  # X_final.columns
 
@@ -20,12 +19,11 @@ def predict():
     df['load_ratio'] = df['cargo_ton'] / df['optimal_load_ton']
     df['overload_penalty'] = np.maximum(0, df['cargo_ton'] - df['max_legal_ton'])
 
-    # distance_category
+
     df['distance_category'] = pd.cut(
         df['distance_km'], bins=[0, 300, 800, np.inf], labels=['short', 'medium', 'long']
     )
 
-    # Kategorik ve sayısal ayrımı
     categorical_cols = ['country', 'vehicle', 'complexity_factor', 'distance_category']
     numeric_cols = ['cargo_ton', 'distance_km', 'duration_hr', 'optimal_load_ton', 'max_legal_ton', 'load_ratio', 'overload_penalty']
 
@@ -39,7 +37,6 @@ def predict():
     # Final veri seti
     X_final = pd.concat([X_num, X_cat_df], axis=1)
 
-    # Eksik sütun varsa sıfırla (önlem)
     for col in expected_columns:
         if col not in X_final.columns:
             X_final[col] = 0

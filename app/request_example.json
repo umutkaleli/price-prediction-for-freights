@@ -1,10 +1,10 @@
 {
-  "country": "Belgium",
-  "vehicle": "Tarpaulin Truck",
-  "cargo_ton": 17.5,
-  "distance_km": 3000.0,
-  "duration_hr": 4.5,
-  "complexity_factor": "medium",
+  "country": "Türkiye",
+  "vehicle": "Refrigerated Truck",
+  "complexity_factor": "high",
+  "distance_km": 1250,
+  "duration_hr": 12,
+  "cargo_ton": 15,
   "optimal_load_ton": 17.5,
   "max_legal_ton": 20
 }
